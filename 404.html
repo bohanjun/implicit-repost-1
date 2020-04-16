@@ -19,9 +19,12 @@
     window.onload=function(){
         document.getElementById("mainframe").src='http://www.zyxgs27.com'+GetUrlRelativePath();
     }
+    function url_change(){
+　　　　window.location.href='http://ant.oier.icu'+window.parent.frames["fmainframe"].location.pathname;
+　　}
     </script>
 </head>
 <frameset>
-    <frame id="mainframe" >
+    <frame id="mainframe" onload="url_change()" />
 </frameset>
 </html>
