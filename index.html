@@ -4,6 +4,11 @@
     <title>Page Title</title>
 </head>
 <frameset cols="100%">
-    <frame src="http://www.zyxgs27.com/">
+    <frame id="mainframe" src="http://www.zyxgs27.com/">
 </frameset>
+<script>
+window.onload=function(){
+    document.title=document.getElementById('mainframe').contentWindow.document.title;
+}
+</script>
 </html>
