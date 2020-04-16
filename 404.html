@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+    function GetUrlRelativePath(){
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);
+
+　　　　/*if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}*/
+
+　　　　return relUrl;
+　　}
+    window.onload=function(){
+        document.getElementById("mainframe").src='http://www.zyxgs27.com'+GetUrlRelativePath();
+    }
+    </script>
+</head>
+<frameset>
+    <frame id="mainframe" src="http://www.zyxgs27.com/" />
+</frameset>
+</html>
